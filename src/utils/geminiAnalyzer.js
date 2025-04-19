@@ -46,8 +46,8 @@ Output only valid JSON with no additional text or explanation.
 `;
 
   return basePrompt;
+  console.log(JSON.stringify(transcriptData, null, 2));
 }
-
 export async function analyzeThroughGemini(transcriptData) {
     try {
       const prompt = constructPrompt(transcriptData);

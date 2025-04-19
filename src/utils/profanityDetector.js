@@ -1,10 +1,5 @@
 const profanityRegex = /\b(fuck|shit|damn|ass|bitch|crap|hell|bastard|dick)\b/i;
 
-/**
- * Detects profanity in calls
- * @param {Array} callTranscript - The call transcript data
- * @returns {Object} Results containing agent and borrower profanity instances
- */
 export function detectProfanity(callTranscript) {
   const results = {
     agentProfanity: [],

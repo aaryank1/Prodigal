@@ -1,21 +1,9 @@
-export const getProfanityRegex = () => profanityRegex;
-
-// src/utils/privacyDetector.js
-/**
- * Utility functions for detecting privacy violations in call transcripts
- */
-
 // Sensitive information patterns
 const sensitiveInfoRegex = /\b(balance|account|owe|payment|due|amount)\b.*?\$?\d+/i;
 
 // Identity verification patterns
 const verificationRegex = /\b(date of birth|dob|ssn|social security|address|verify|verification)\b/i;
 
-/**
- * Detects privacy violations (sharing sensitive info without verification)
- * @param {Array} callTranscript - The call transcript data
- * @returns {Array} Instances of privacy violations
- */
 export function detectPrivacyViolations(callTranscript) {
   const violations = [];
   let verificationPerformed = false;
